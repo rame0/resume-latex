@@ -9,5 +9,26 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: "*.tex"
-          glob_root_file: true
+          root_file: |
+            resume_ru.tex
+      - name: Upload
+        run: |
+          # configure git
+          git config --global user.name "rame0"
+          git config --global user.email "r@me0.biz"
+
+          # setup ssh
+          mkdir ~/.ssh
+          chmod 700 ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_ed25468
+          chmod 600 ~/.ssh/id_ed25468
+          git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25468 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+
+          git clone --depth=1 --branch gh-pages git@github.com:rame0/resume-latex.git "$GITHUB_WORKSPACE/deploy"
+          cp -f resume_ru.pdf "$GITHUB_WORKSPACE/deploy/resume_ru.pdf"
+          cd "$GITHUB_WORKSPACE/deploy"
+          git add resume_ru.pdf
+          git commit -m "[github actions] deploy"
+          git push
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
