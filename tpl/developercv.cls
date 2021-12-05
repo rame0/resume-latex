@@ -65,14 +65,14 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[T2A,T1]{fontenc}
 
 % \usepackage[default]{raleway}
-%\usepackage[defaultsans]{droidsans}
-%\usepackage{cmbright}
-%\usepackage{fetamont}
-%\usepackage[default]{gillius}
-%\usepackage{roboto}
+% \usepackage[defaultsans]{droidsans}
+% \usepackage{cmbright}
+% \usepackage{fetamont}
+% \usepackage[default]{gillius}
+\usepackage{roboto}
 
 % \renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
 
@@ -150,7 +150,7 @@
 	\setcounter{a}{0}
 	\setcounter{c}{150}
 
-	\begin{tikzpicture}[scale=3]
+	\begin{tikzpicture}[scale=4]
 		\foreach \p/\t in {#1} {
 			\addtocounter{a}{1}
 			\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}
@@ -171,7 +171,8 @@
 % Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
 	\vspace{\baselineskip} % Whitespace before the section title
-	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}\\% Section title
+	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}% Section title
+	\vspace{\baselineskip}
 }
 
 %----------------------------------------------------------------------------------------

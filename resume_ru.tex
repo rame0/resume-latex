@@ -20,7 +20,8 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\documentclass[10pt]{tpl/developercv} % Default font size, values from 8-12pt are recommended
+\usepackage[russian]{babel}
 
 %----------------------------------------------------------------------------------------
 
@@ -30,36 +31,40 @@
 %	TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
+\begin{minipage}[t]{0.44\textwidth} % 45% of the page width for name
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
 	% If your name is very short, use just one of the lines below
 	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Alyx}}}}} % First name
+	\colorbox{black}{{\Huge\textcolor{white}{\textbf{\MakeUppercase{Рамиль}}}}} % First name
 
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Vance}}}}} % Last name
+	\colorbox{black}{{\Huge\textcolor{white}{\textbf{\MakeUppercase{Алиякберов}}}}} % Last name
 
 	\vspace{6pt}
 
-	{\huge Web App Architect} % Career or current job title
+	{\huge Full stack разработчик} % Career or current job title
 \end{minipage}
 \begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
 	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{MapMarker}{12}{Black Mesa East}\\
-	\icon{Phone}{12}{+1 123 456 789}\\
-	\icon{At}{12}{\href{mailto:alyx@vance.me}{alyx@vance.me}}\\
+	\icon{MapMarker}{12}{Россия, Москва}
+
+	\href{mailto:r@me0.biz}{\icon{At}{12}r@me0.biz}
+
+	\href{tel:+7925394310}{\icon{Phone}{12}+7 925 394-31-50}
 \end{minipage}
 \begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
 	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{Globe}{12}{\href{https://alyx.vance.me}{alyx.vance.me}}\\
-	\icon{Github}{12}{\href{https://github.com/alyxvance}{github.com/alyxvance}}\\
-	\icon{Twitter}{12}{\href{https://twitter.com/@alyxvance}{@alyxvance}}\\
+	\href{https://www.rame0.ru/}{\icon{Globe}{12}www.rame0.ru}
+
+	\href{https://github.com/rame0}{\icon{Github}{12}github.com/rame0}
+
+	\href{https://stackoverflow.com/users/513723/rame0}{\icon{StackOverflow}{12}StackOverflow}
 \end{minipage}
 
 \vspace{0.5cm}
@@ -68,76 +73,142 @@
 %	INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
 
-\cvsect{Who Am I?}
+\cvsect{Кто я?}
 
-\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+
+\begin{minipage}[t]{0.45\textwidth} % 40% of the page width for the introduction text
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	\lorem \lorem \lorem \lorem \lorem\\ % Dummy text
+	Разработчик с стажем более 10 лет.
+  \bigskip
+
+  На последних курсах университета работал C\# разработчиком.
+
+  После службы в ВС РФ работал "'отделом разработки"' в небольшой семейной компании (PHP, JS, CSS).
+
+  После этого некоторое время занимался SEO (продвижение сайтов в поисковых системах) и преподавал его, совмещая с разработкой сайтов на фрилансе.
+
+  На данный момент работаю аутсорс-разработчиком в оптовой компании (PHP, JS, SCSS, ...).
+
+	Основные используемые технологии: {PHP 7.4,} {JS (в основном jQuery)}, SCSS, Docker, NPM, Composer, Gulp, {Git (GitHub)}.
+	Периодически используемые: Python, редко C\#.
 \end{minipage}
 \hfill % Whitespace between
 \begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 	\begin{barchart}{5.5}
-		\baritem{JavaScript}{60}
+		\baritem{JavaScript}{90}
 		\baritem{PHP}{100}
+		\baritem{MYSQL}{100}
 		\baritem{SASS/LESS}{70}
-		\baritem{Bootstrap}{70}
-		\baritem{Git}{40}
-		\baritem{LaTeX}{60}
+		\baritem{Git}{60}
+		\baritem{Docker(compose)}{50}
+		\baritem{NPM}{80}
+		\baritem{Composer}{80}
 	\end{barchart}
 \end{minipage}
 
 \begin{center}
-	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
+	\bubbles{5/PHPStorm, 4/Linux DE, 3/Linux Server, 5/Windows}
 \end{center}
 
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\cvsect{Experience}
+\cvsect{Опыт}
 
 \begin{entrylist}
 	\entry
-		{2017 -- 3/2018}
-		{Front-end developer}
-		{Big Corporation Name Inc.}
-		{\lorem \lorem \lorem\\ \texttt{node.js}\slashsep\texttt{Vue.js}\slashsep\texttt{Electron}}
+		{2007 -- 2008
+
+		\footnotesize{part time}}
+		{Junior C\# Developer}
+		{ООО 'Группа Алланд'}
+		{Разработка пользовательских интерфейсов, архитектуры системы и архитектуры баз данных(в меньшей степени). Мы разрабатывали информационные системы, на подобии 1С, но со специфическими задачами. Так же нами разрабатывалась система контроля полного цикла проведения всероссийских интеллектуальных конкурсов для школьников.
+
+		\texttt{C\#}\slashsep\texttt{SQL}\slashsep\texttt{Web/Win-Services}\slashsep\texttt{OLAP}\slashsep\texttt{TFS}}
 	\entry
-		{2015 -- 2018\\\footnotesize{part time}}
-		{Full stack developer}
-		{Famous Eshop Inc.}
-		{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{MariaDB}\slashsep\texttt{Linux}}
+		{2008-2009}
+		{Срочная служба}
+		{ВС РФ}
+		{Ни чего особенного, иногда помогал с презентациями, офисными программами и программами учета.}
 	\entry
-		{2013 -- 2014\\\footnotesize{part time}}
-		{Junior PHP Developer}
-		{example.com}
-		{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{Laravel}}
+		{2009 -- 2015}
+		{Full stack разработчик}
+		{www.evrosite.ru}
+		{Работа в небольшой семейной компании. Был единственным разработчиком, помимо изредка привлекаемых фрилансеров.
+
+		Выполнял весь цикл разработки сайтов, начиная с верстки и заканчивая размещением на хостинге/сервере (включая поддержку серверов). В основном, разработка велась на внутренней CMS разработанной предыдущим программистом. Так же, ипользовались такие CMS, как: OpenCart, 1C Битрикс, AmiroCMS, Wordpress. В сложные времена, так же, выполнял работу продажника, менеджера проектов и другие обязанности.
+
+		\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{CSS}\slashsep\texttt{MySQL}\slashsep\texttt{Linux}}
+
+	\entry
+		{4/2013 -- 2/2018
+
+		\footnotesize{part time}}
+		{SEO специалист/Full stack}
+		{Фриланс}
+		{С конца 2013 года, когда кол-во заказов стало уменьшаться, заинтересовался SEO продвижением и, понемногу, начала оказывать услуги SEO.\\
+		С 2015 основную часть заказов составляли заказы по SEO. С уклоном в фишки, которые можно внедрять с позиции разработчика. Так сказать, базовое продвижение, о котором большинство разработчиков сайтов даже не задумывалось.\\
+		По прежнему занимался разработкой сайтов но уже в меньшем количестве (до 10 сайтов в год). В основном делала сайты на AmiroCMS и, иногда, на 1С Битрикс
+
+		\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{CSS}\slashsep\texttt{MySQL}\slashsep\texttt{Linux}}
+	\entry
+		{3/2015 -- 4/2017
+
+		\footnotesize{part time}}
+		{Преподаватель SEO}
+		{ООО "'ТопЭксперт"' (www.topexpert.pro)}
+		{Переподавал базовые знания по Поисковой оптимизации -- SEO (Search Engine Optimisation) -- на образовательной платформе TopЭксперт. Провел в общей сложности 7 потоков, более 100 человек. В обязанности входило проведение уроков теория/практика и проверка домашних заданий. Основной упор в базовых знаниях делался на понимании что такое поисковая система и как она работает, а так же на том, какие ошибки (с точки зрения SEO) допускают разработчики сайтов и как их исправить. Принимал участие в разработке плана обучения, самого курса, а так же доп. материалов(презентаций, примеров и прочего). Написал руководство по составлению семмантического ядра сайта.}
+	\entry
+		{3/2016 -- 2/2018
+
+		\footnotesize{part time}}
+		{Full stack outsource}
+		{ООО "'Интерьер комфорт"' }
+		{Помощь в поддержке серверов. Доработка и поддержка 2 интернет-магазинов. Поддерка системы управления складом и оптовых продаж.
+
+		\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{SCSS}\slashsep\texttt{MySQL}\slashsep\texttt{Linux}}
+	\entry
+		{2/2018 -- present}
+		{Full stack outsource}
+		{ООО "'Интерьер комфорт"' }
+		{Разработка с нуля системы складов и оптовых продаж. Разработка внутренней CMS для данной системы.
+
+		Перевод интернет магазина на внутреннюю CMS.
+
+		Выделение ядна внутренней CMS в отдельный проект.
+
+		Разработка системы для управления перевозками (по сути транспортной компании) на базе разработанного ядра.
+
+		С начала 2021 года 1 программист в подчинении.
+
+		\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{SCSS}\slashsep\texttt{MySQL}\slashsep\texttt{Linux}}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
-\cvsect{Education}
+\cvsect{Образование}
 
 \begin{entrylist}
 	\entry
-		{2013 -- 2017}
-		{Master's Degree}
-		{Another University Name}
-		{\lorem\lorem\lorem}
+		{2003 -- 2008}
+		{Мат. обеспечение и админ. ИС}
+		{УлГУ}
+		{Получил диплом о высшем образовании по специальности Математическое обеспечение и администрирование информационных систем в Ульяновском Государственном Университете.
+
+		Тема диплома: Разработка автоматизированной системы технической поддержки пользователей, на основе встраиваемого интернет пейджера (.NET).
+
+		Технологии: C\#, MSSQL, Client-Server
+		}
 	\entry
-		{2014}
-		{Postgraduate Diploma}
-		{A University Name}
-		{\lorem\lorem}
-	\entry
-		{2007 -- 2013}
-		{Bachelor's Degree}
-		{A University Name}
-		{\lorem\lorem}
+		{constant}
+		{Самообразование}
+		{}
+		{Стараюсь изучать новые технологии и улучшать знания в имеющихся. К сожалению, не всегда получается изучить то, что на данный момент не применимо. Например, давно хочется изучить ReactJS, но дальше чем пройти пару туториалов дело не заходило, т.к. пока это не применимо к рабочим проектам.}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
@@ -149,17 +220,17 @@
 
 	\cvsect{Languages}
 
-	\textbf{English} - native\\
-	\textbf{German} - proficient\\
-	\textbf{Polish} - rudimentary
+	\textbf{Русский} - родной\\
+	\textbf{English} - говорю/пишу\\
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	\cvsect{Hobbies}
+	\cvsect{Хобби}
 
-	I love... \lorem
+	Часто смотрю что-то образовательное. Изучаю разные штуки, в основном связанные с компьютерами. Например Pen-тестинг или 3d моделирование.
+	Реже - читаю sci-fi и фентези.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.3\textwidth}
@@ -167,7 +238,7 @@
 
 	\cvsect{Non profit}
 
-	I help... \lorem
+	Изредки пишу что то в блог и отвечаю на StackOverflow. Иногда занимаюсь ревью постов на StackOverflow.
 \end{minipage}
 
 %----------------------------------------------------------------------------------------
