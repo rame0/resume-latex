@@ -30,6 +30,8 @@
             anchorcolor = blue]{hyperref}
 \usepackage{datetime}
 \usepackage{texdate}
+\initcurrdate
+\def\setdateformat{d-m-Y}
 %----------------------------------------------------------------------------------------
 
 
@@ -41,7 +43,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\href{https://rame0.github.io/resume-latex/resume_ru.pdf}{Скачать актуальную версию}}
-\lhead{Док. обновлен: \printfdate{ISOext} \currenttime}
+\lhead{Док. обновлен: \printdate\ \currenttime}
 % \rfoot{Page \thepage}
 %----------------------------------------------------------------------------------------
 
