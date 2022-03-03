@@ -33,6 +33,22 @@
 \definecolor{maingray}{HTML}{B9B9B9}
 
 %----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T2A,T1]{fontenc}
+
+% \usepackage[default]{raleway}
+% \usepackage[defaultsans]{droidsans}
+% \usepackage{cmbright}
+% \usepackage{fetamont}
+% \usepackage[default]{gillius}
+\usepackage{roboto}
+
+% \renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
+
+%----------------------------------------------------------------------------------------
 %	 MISC CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
@@ -80,7 +96,7 @@
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
 % Command for printing skill progress bars
-\newcommand\skills[1]{ 
+\newcommand\skills[1]{
 	\renewcommand{\skills}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
@@ -93,10 +109,10 @@
 }
 
 % Command for printing skills text
-\newcommand\skillstext[1]{ 
+\newcommand\skillstext[1]{
 	\renewcommand{\skillstext}{
 		\begin{flushleft}
-			\foreach [count=\i] \x/\y in {#1}{ 
+			\foreach [count=\i] \x/\y in {#1}{
 				\x$ \star $\y
 			}
 		\end{flushleft}
@@ -115,9 +131,9 @@
 	%------------------------------------------------
 
 	\begin{textblock}{6}(0.5, 0.2)
-			
+
 		%------------------------------------------------
-		
+
 		\ifthenelse{\equal{\profilepic}{}}{}{
 			\begin{center}
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
@@ -147,7 +163,7 @@
 		\end{tabular}
 
 		%------------------------------------------------
-		
+
 		\ifthenelse{\equal{\aboutme}{}}{}{
 			\profilesection{About me}
 			\begin{flushleft}
@@ -163,9 +179,9 @@
 		\skillstext
 		\scriptsize
 		(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
-			
+
 		%------------------------------------------------
-			
+
 	\end{textblock}
 }
 
