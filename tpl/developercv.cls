@@ -60,29 +60,42 @@
 	%showframe, % Uncomment to show how the type block is set on the page
 }
 
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+
+%----------------------------------------------------------------------------------------
+%	 COLOURS
+%----------------------------------------------------------------------------------------
+
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{gray}{HTML}{4D4D4D}
+\definecolor{sidecolor}{HTML}{E7E7E7}
+\definecolor{mainblue}{HTML}{0E5484}
+\definecolor{maingray}{HTML}{B9B9B9}
 %----------------------------------------------------------------------------------------
 %	FONTS
 %----------------------------------------------------------------------------------------
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T2A,T1]{fontenc}
 
 % \usepackage[default]{raleway}
-% \usepackage[defaultsans]{droidsans}
+\usepackage[defaultsans]{droidsans}
 % \usepackage{cmbright}
 % \usepackage{fetamont}
 % \usepackage[default]{gillius}
-\usepackage{roboto}
+% \usepackage[sfdefault]{roboto}
 
 % \renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
 
+\usepackage[T2A,T1]{fontenc}
 %------------------------------------------------
 
 \usepackage{fontawesome} % Required for FontAwesome icons
 
 % Command to output an icon in a black square box with text to the right
 \newcommand{\icon}[3]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	\vcenteredhbox{\colorbox{black}{\makebox(#2, #2){\textcolor{white}{\large\csname fa#1\endcsname}}}}% Icon and box
+	\vcenteredhbox{\colorbox{mainblue}{\makebox(#2, #2){\textcolor{white}{\large\csname fa#1\endcsname}}}}% Icon and box
 	\hspace{0.2cm}% Whitespace
 	\vcenteredhbox{\textcolor{black}{#3}}% Text
 }
@@ -164,6 +177,32 @@
 	\node[label=\textcolor{black}{#4}] at (#1,0.7) {}; % Label
 }
 
+
+
+% Command for printing skill progress bars
+\newcommand{\skills}[1]{
+	% \renewcommand{\skills}{
+		\begin{tikzpicture}
+			\foreach [count=\i] \x/\y in {#1}{
+				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.2);
+				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.2);
+				\node [above right] at (0,\i+0.4) {\x};
+			}
+		\end{tikzpicture}
+	% }
+}
+
+% Command for printing skills text
+\newcommand{\skillstext}[1]{
+	% \renewcommand{\skillstext}{
+		\begin{flushleft}
+			\foreach [count=\i] \x/\y in {#1}{
+				\x$ \star $\y
+			}
+		\end{flushleft}
+	% }
+}
+
 %----------------------------------------------------------------------------------------
 %	CUSTOM SECTIONS
 %----------------------------------------------------------------------------------------
@@ -171,7 +210,7 @@
 % Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
 	\vspace{\baselineskip} % Whitespace before the section title
-	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}% Section title
+	\textcolor{mainblue}{\Large\MakeUppercase{\textbf{\underline{#1}}}}% Section title
 	\vspace{\baselineskip}
 }
 
