@@ -15,6 +15,8 @@ jobs:
           root_file: |
             resume_ru.tex
             resume_en.tex
+            projects_ru.tex
+            projects_en.tex
       - name: Upload
         run: |
           mkdir /tmp/pdf

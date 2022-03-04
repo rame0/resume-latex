@@ -1,105 +1,23 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Developer CV
-% LaTeX Template
-% Version 1.0 (28/1/19)
-%
-% This template originates from:
-% http://www.LaTeXTemplates.com
-%
-% Authors:
-% Jan Vorisek (jan@vorisek.me)
-% Based on a template by Jan Küster (info@jankuester.com)
-% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\input{parts/config.tex}
+\input{parts/header_footer_ru.tex}
 
-\documentclass[10pt]{tpl/developercv} % Default font size, values from 8-12pt are recommended
-\usepackage[russian]{babel}
-\usepackage[hidelinks,
-            colorlinks = true,
-            linkcolor = blue,
-            urlcolor  = blue,
-            citecolor = blue,
-            anchorcolor = blue]{hyperref}
-\usepackage{datetime}
-\usepackage{texdate}
-\usepackage{enumitem}
-\initcurrdate
-\def\setdateformat{d-m-Y}
-%----------------------------------------------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-% Header & Footer
-%----------------------------------------------------------------------------------------
-\usepackage{fancyhdr}
-
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{\href{https://rame0.github.io/resume-latex/resume_ru.pdf}{Скачать актуальную версию}}
-\lhead{Док. обновлен: \printdate\ \currenttime}
-% \rfoot{Page \thepage}
-%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+\input{parts/title_ru.tex}
 
-\begin{minipage}[t]{0.44\textwidth} % 45% of the page width for name
+\vspace{6pt}
+
+\begin{minipage}[t]{0.25\textwidth}
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
-
-	% If your name is very short, use just one of the lines below
-	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-	{\Huge{\textbf{\textcolor{mainblue}{\MakeUppercase{Рамиль}}}}} % First name
-
-	\vspace{4pt}
-
-	{\Huge{\textbf{\textcolor{mainblue}{\MakeUppercase{Алиякберов}}}}} % Last name
-
-	\vspace{6pt}
-
-  \large{Full stack web-разработчик} % Career or current job title
-
-  \vspace{6pt}
-
-  \textbf{\underline{RU}} / \href{https://rame0.github.io/resume-latex/resume_en.pdf}{EN}
-
+Language: \textbf{\underline{RU}} / \href{https://rame0.github.io/resume-latex/resume_en.pdf}{EN}
 \end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{MapMarker}{12}{\ Москва, Россия}
-
-	\href{mailto:r@me0.biz}{\icon{At}{12}\ r@me0.biz}
-
-	\href{tel:+79253943150}{\icon{Phone}{12}\ +7 925 394-31-50}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.70\textwidth}
+	 \vspace{-\baselineskip} % Required for vertically aligning minipages
+Проекты: \href{https://rame0.github.io/resume-latex/projects_ru.pdf}{RU} / \href{https://rame0.github.io/resume-latex/projects_en.pdf}{EN}
 \end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\href{https://www.rame0.ru/}{\icon{Globe}{12}\ www.rame0.ru}
-
-	\href{https://github.com/rame0}{\icon{Github}{12}\ github.com/rame0}
-
-	\href{https://stackoverflow.com/users/513723/rame0}{\icon{StackOverflow}{12}\ StackOverflow}
-
-\end{minipage}
-
-\vspace{0.5cm}
-
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
@@ -118,7 +36,7 @@
       \item После службы в ВС РФ работал "'отделом разработки"' в небольшой семейной компании (PHP, JS, CSS).
       \item После этого некоторое время занимался SEO (продвижение сайтов в поисковых системах) и преподавал его, совмещая с разработкой сайтов на фрилансе.
       \item На данный момент работаю аутсорс-разработчиком в оптовой компании (PHP, JS, SCSS).
-      \item Основные используемые технологии: PHP, JS (в основном jQuery), SCSS, Docker, Yarn, Composer, Gulp, {Git (GitHub)}.
+      \item{Основные используемые технологии: PHP, SCSS, JS (в основном jQuery), Docker, Yarn, Composer, Gulp, Git (GitHub), Webpack (внедрил недавно).}
       \item Периодически используемые: Python, редко C\#.
       \item В разное время брал фрилансеров на подряд.
       \item Сейчас в подчинении 1 программист.
@@ -129,22 +47,7 @@
 \begin{minipage}[t]{0.35\textwidth} % 50% of the page for the skills bar chart
 	 \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-
-  % Skill bar section, each skill must have a value between 0 an 6 (float)
-  \skills{{YouTrack (Agile)/3},{Composer/4},{NPM/4},{Docker/3},{Git/3},{SASS/4},{MySQL/5},{JavaScript/5.2},{PHP/5.5}}
-  % \skills
-  %
-	% \begin{barchart}{5.5}
-	% 	\baritem{JavaScript}{90}
-	% 	\baritem{PHP}{100}
-	% 	\baritem{MySQL}{100}
-	% 	\baritem{SASS/LESS}{70}
-	% 	\baritem{Git}{60}
-	% 	\baritem{Docker(compose)}{50}
-	% 	\baritem{NPM}{80}
-	% 	\baritem{Composer}{80}
-  %   \baritem{YouTrack (Agile)}{50}
-	% \end{barchart}
+   \input{parts/skills.tex}
 \end{minipage}
 
 % \begin{center}
@@ -162,8 +65,7 @@
 		{2/2018 -- present}
 		{Full stack outsource}
 		{ООО "'Интерьер комфорт"' }
-		{
-    Перешел в компанию на full-time.
+		{Перешел в компанию на full-time.
 
     Разработка с нуля системы складов и оптовых продаж. Разработка внутренней CMS для данной системы.
 
@@ -175,7 +77,10 @@
 
 		С начала 2021 года 1 программист в подчинении.
 
-		\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{SCSS}\slashsep\texttt{MySQL}\slashsep\texttt{Linux}}
+		\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{SCSS}\slashsep\texttt{MySQL}\slashsep\texttt{Linux}
+    \slashsep\texttt{Docker}\slashsep\texttt{Yarn/NPM}\slashsep\texttt{Composer}\slashsep\texttt{GitHub}
+
+    \texttt{Gulp}\slashsep\texttt{Webpack}}
 
 	\entry
 		{3/2016 -- 2/2018
@@ -185,7 +90,9 @@
 		{ООО "'Интерьер комфорт"' }
 		{Помощь в поддержке серверов. Доработка и поддержка 2 интернет-магазинов. Поддержка системы управления складом и оптовыми продажами.
 
-		\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{SCSS}\slashsep\texttt{MySQL}\slashsep\texttt{Linux}}
+		\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{SCSS}\slashsep\texttt{MySQL}\slashsep\texttt{Linux}
+    \slashsep\texttt{Yarn/NPM}\slashsep\texttt{Composer}\slashsep\texttt{GitHub}\slashsep\texttt{Gulp}
+    }
 
 	\entry
 		{3/2015 -- 4/2017
@@ -193,7 +100,7 @@
 		\footnotesize{part time}}
 		{Преподаватель SEO}
 		{ООО "'ТопЭксперт"' (www.topexpert.pro)}
-		{Преподавал базовые знания по Поисковой оптимизации -- SEO (Search Engine Optimisation) -- на образовательной платформе TopЭксперт. Провел в общей сложности 7 потоков, более 100 человек. В обязанности входило проведение уроков теория/практика и проверка домашних заданий. Основной упор в базовых знаниях делался на понимании, что такое поисковая система и как она работает, а так же на том, какие ошибки (с точки зрения SEO) допускают разработчики сайтов и как их исправить. Принимал участие в разработке плана обучения, самого курса, а так же доп. материалов(презентаций, примеров и прочего). Написал руководство по составлению семантического ядра сайта.}
+		{Преподавал базовые знания по Поисковой оптимизации (SEO) на образовательной платформе TopЭксперт. Провел в общей сложности 7 потоков, более 100 человек. В обязанности входило проведение уроков теория/практика и проверка домашних заданий. Основной упор в базовых знаниях делался на понимании, что такое поисковая система и как она работает, а так же на том, какие ошибки (с точки зрения SEO) допускают разработчики сайтов и как их исправить. Принимал участие в разработке плана обучения, самого курса, а так же доп. материалов(презентаций, примеров и прочего). Написал руководство по составлению семантического ядра сайта.}
 
 	\entry
 		{4/2013 -- 2/2018
@@ -282,150 +189,6 @@
 
 	Изредка пишу что-то в блог и отвечаю на StackOverflow. Иногда занимаюсь ревью постов на StackOverflow.
 \end{minipage}
-
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-% MORE ABOUT PROJECTS
-%----------------------------------------------------------------------------------------
-\newpage
-\cvsect{\HugeПроекты}
-
-На подавляющем большинстве проектов использовались: PHP (от 5.1 до 7.4), JQuery, MySQL.
-
-\section{Разработка более 200 сайтов}
-
-За все время работы в веб-студии и во время работы в SEO, мной и с моим участием, было создано более 200 вебсайтов разного типа. От визиток до интернет-магазинов. Изредка попадались интересные проекты вроде:
-\begin{itemize}
-   \item разработки тестирования сотрудников (PHP),
-   \item разработки софта для опроса и последующей разработки рекомендаций для бизнеса (C\#),
-   \item разработки одностраничника с большим количеством меняющейся анимации при скролле (JavaScript)
-   \item разработка системы для управления складами и оптовыми продажами (PHP, JS)
-\end{itemize}
-
-В подавляющем большинстве случаев, сайты разрабатывались на внутренней CMS, созданной для простых сайтов еще в 2005 на PHP 5.1. Она использовалась вплоть до 2015 года. Попытки ее доработки не прекращалась до полного отказа. Она была не гибкая, но очень простая и быстрая в разработке, поэтому её оставляли для чего-то что нужно сделать "вчера". По сути, вся CMS была одним файлом (если не считать файлы с логикой авторизации, работы с БД, и рендера самого сайта) с большим количеством *if'ов* и кусков *HTML*. На ней же разработана система управления складами и продажами для поставщика ковров, на которую я частично перешел работать в 2016 году.
-
-\begin{itemize}
- \item Большим плюсом и, в то же время минусом, системы было то, что всё (кроме главного файла) можно было изменять непосредственно в самой системе, включая таблицы в БД.
-
- \item Минусом же были сложность добавления функционала, невозможность переиспользовать код (которая частично исправлялась со временем), а так же "дырявость" и устаревшая версия языка.
-\end{itemize}
-
-\section{Система управления складом и оптовыми продажами}
-\subsection{Версия 1}
-
-Первая версия системы была написана в 2013 году. Для её разработки была использована упомянутая ранее CMS с огромным количеством доработок. Некоторые из них:
-\begin{itemize}
-  \item Была переписана система авторизации.
-  \item Переписана сама БД и работа с ней.
-  \item Переписан, частично, "шаблонизатор".
-  \item Были написаны несколько видов API: для AJAX запросов, для партнеров, для маркетплейсов.
-\end{itemize}
-
-Самыми большими недостатками явились:
-\begin{itemize}
-  \item Минимальная связанность частей системы.
-  \item Невозможность добавления складов, в результате чего, для разных складов приходилось создавать отдельные копии системы.
-  \item Устаревший код который стало, практически, невозможно поддерживать и дополнять.
-\end{itemize}
-
-В таком виде система просуществовала до 2018 года пока не было принято решение её написать ее с нуля.
-
-\subsection{Версия 2}
-В 2018 году удалось убедить руководство, что дальнейшая поддержка системы практически невозможна. И было принято решение начать разрабатывать новую версию с нуля.
-
-Она уже разрабатывалась на шаблоне MVC*. Стандартные логические слои: Данные - Логика - Представления.
-\paragraph{}
-
-Backend:
-\begin{itemize}
-  \item Роутер собственного производства, похожий на FastRoute
-  \item За работу с БД отвечает FluentPDO
-  \item Шаблонизатор - Twig
-  \item Кеширование шаблонов Twig делает сам, кеширование других данных реализованно на файлах
-  \item Для работы Моделей, реализован класс Model наследуемый от Entity (общее описание структуры) и реализующий методы выбора/изменения/сохранения этой структуры запросами к БД через FluentPDO
-  \item Для работы с наборами данных реализованны классы Collection и Dictionary (используется редко)
-  \item Создание основных объектов, вроде App или Request, реализованно через шаблон Singleton
-  \item Для отладки используется мой форк умершего \href{https://github.com/rame0/chromephp}{ChromePHP} (чуть более старая версия, т.к. новому логеру нужен PHP7.4)
-  \item PHP 7.2 + MySQL (MariaDB)
-\end{itemize}
-
-Frontend:
-\begin{itemize}
-  \item JQuery - JS фреймворк
-  \item Bootstrap - CSS фремворк
-  \item Все CSS стили пишутся на SASS
-  \item Сборка и минификация JS и SCSS осуществляется с помощью Gulp
-\end{itemize}
-
-Other:
-\begin{itemize}
-  \item Docker используется для разворачивания DEV среды
-  \item Composer - менеджеры пакетов PHP
-  \item Yarn - менеджеры пакетов JS
-  \item Реализованы Yarn скрипты для:
-  \begin{itemize}
-    \item запуска build (dev/prod) и watch для сборки JS и CSS
-    \item установки и обновления пакетов Composer в Docker образе
-    \item запуска выполнения Cron задач в образе
-  \end{itemize}
-\end{itemize}
-
-\subsection{Основные функции}
-\begin{itemize}
-  \item Управление клиентами
-  \item Управление остатками товаров
-  \item {
-    Удобный табличный вид оформления заказа с навигацией стрелками клавиатуры
-    \begin{center}
-      \begin{tabular}{ |c|c|c| }
-        \hline
-        & 2x3 & 3x4 \\
-        \hline
-         Ковёр 1 & [  ] & [  ] \\
-                & 1 шт. & 5 шт. \\
-        \hline
-         Ковёр 2 & [] & [  ] \\
-                & 0 шт. & 10 шт. \\
-        \hline
-      \end{tabular}
-    \end{center}
-  }
-  \item Управление коллекциями, товарами и ценами
-  \item Рассылки клиентам различных уведомлений
-  \item Экспорт/импорт товаров и остатков
-  \item API для партнеров (восстановление из v1 в процессе)
-  \item API для маркетплейсов (только в v1)
-\end{itemize}
-
-\section{Основной розничный сайт}
-В 2020 году на базу разработанного кода системы управления был перенесен основной розничный сайт компании (\href{https://www.kovrotexs.ru/}{https://www.kovrotexs.ru/}).
-
-На первой версии сайта Back'ом и Front'ом занимался только я. Во время перехода на новый backend, для ускорения работы, для реализации front'а был нанят фрилансер (я только сделал ему базу и следил за выполнением).
-
-\begin{itemize}
-  \item Frontend, по-прежнему, JQuery + Bootstrap
-  \item Были добавлены методы кеширования каталогов, фильтров и характеристик товаров.
-  \item В качестве поискового движка используется Manticore Search.
-  \item Полностью переработаны методы работы с товарами и остатками.
-  \item Управление повторяющимися задачами - Crunz (Cron)
-  \item Реализован клиент API для получения остатков с сайтов партнеров.
-\end{itemize}
-
-\section{Система управления транспортной компанией}
-Во втором квартале 2021 года началась работа над созданием системы для управления перевозками. Велись обсуждения и исследования и прикидывались основная схема работы и общий функционал.
-
-В конце лета 2021 началась основная фаза разработки.
-
-\begin{itemize}
-  \item Frontend - JQuery + Bootstrap
-  \item PHP 7.4
-  \item Было принято решение выделить предыдущие наработки в отдельный фреймворк и работать на нем
-  \item В процессе переноса отказался от Singleton'ов
-  \item Заменил собственный роутер на FastRoute
-  \item Сборщик Glup заменен на Webpack (он показал себя минимум в 10 раз быстрее)
-  \item На данный момент разработка еще ведется. В целом система готова (прием грузов и заказов, погрузка/разгрузка, управление сотрудниками/клиентами/водителями/машинами). Идет тестирование и, часто, полное изменение некоторого функционала.
-\end{itemize}
 
 %----------------------------------------------------------------------------------------
 
