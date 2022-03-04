@@ -42,6 +42,7 @@
 
 \usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
 
+
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT
 %----------------------------------------------------------------------------------------
@@ -80,8 +81,8 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 
 % \usepackage[default]{raleway}
-\usepackage[defaultsans]{droidsans}
-% \usepackage{cmbright}
+% \usepackage[defaultsans]{droidsans}
+\usepackage{cmbright}
 % \usepackage{fetamont}
 % \usepackage[default]{gillius}
 % \usepackage[sfdefault]{roboto}
@@ -100,6 +101,7 @@
 	\vcenteredhbox{\textcolor{black}{#3}}% Text
 }
 
+\usepackage{csquotes}
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -186,7 +188,7 @@
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.2);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.2);
-				\node [above right] at (0,\i+0.4) {\x};
+				\node [above right] at (0,\i+0.2) {\x};
 			}
 		\end{tikzpicture}
 	% }
@@ -243,4 +245,4 @@
 	}\\\\}
 
 % Command to output a separator slash between lists, e.g. '  /  '
-\newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
+\newcommand{\slashsep}{\hspace{2mm}/\hspace{2mm}}
